@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact — 100SMILES Dental Care</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<script src="contact-form.js"></script>
+<script src="script.js"></script>
+
+
+<body>
+  <header>
+    <div class="container site-title">
+      <div>
+        <h1>Contact</h1>
+        <div class="small">Get in touch or book an appointment</div>
+      </div>
+    </div>
+    <nav class="mobile-nav">
+      <div id="menu-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Our Team</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+      <!-- Hamburger icon -->
+      <a class="menu-icon" onclick="hamburger()">
+        <div>&#9776;</div>
+      </a>
+    </nav>
+
+    <div class="container site-title">
+</div>
+      <nav style="margin-left:auto">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Contact details</h2>
+      <ul class="contact-list">
+        <li><strong>Phone (clinic):</strong> 07 5000 5599</li>
+        <li><strong>Event bookings / Free checkup:</strong> 07 1327 5599</li>
+        <li><strong>Fax:</strong> 07 4567 9999</li>
+        <li><strong>Email:</strong> <a
+            href="mailto:admin@100smilesdentalcare.com.au">admin@100smilesdentalcare.com.au</a></li>
+        <li><strong>Address:</strong> 33 Fantail Street, Razole, Queensland</li>
+        <li><strong>Trading hours:</strong> Mon–Fri 8:30–18:30 · Sat–Sun 8:30–13:00</li>
+      </ul>
+    </section>
+
+    <!-- ========== APPOINTMENT FORM ========== -->
+    <section class="card">
+      <h2>Send us a message / Request an appointment</h2>
+
+      <form id="contactForm" novalidate>
+        <label for="fullname">Full name *</label>
+        <input id="fullname" name="fullname" type="text" required>
+
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="phone">Phone *</label>
+        <input id="phone" name="phone" type="tel" placeholder="e.g. 07 5000 5599" required>
+
+        <label for="reason">Reason for contacting *</label>
+        <select id="reason" name="reason" required>
+          <option value="">-- Select an option --</option>
+          <option>General enquiry</option>
+          <option>Book an appointment</option>
+          <option>Change an appointment</option>
+          <option>Emergency</option>
+          <option>Other</option>
+        </select>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <label><input id="consent" type="checkbox" required> I consent to my details being used to respond to my enquiry
+          *</label>
+
+        <button type="submit" class="cta" style="margin-top:1rem">Send message</button>
+        <button type="reset" style="margin-left:0.5rem">Reset</button>
+
+        <div id="formMessage" class="small" style="margin-top:0.8rem"></div>
+      </form>
+    </section>
+  </main>
+
+
+  <footer class="container footer">
+    <div>© 100SMILES Dental Care</div>
+  </footer>
+</body>
+
+</html>

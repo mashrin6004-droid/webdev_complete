@@ -1,0 +1,284 @@
+/* styles.css */
+:root {
+  --accent: #0077a6;
+  --muted: #666;
+  --bg: #fafafa;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: #222;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem
+}
+
+header {
+  background: linear-gradient(90deg, #f7fbfd, #eaf6fb);
+  border-bottom: 1px solid #eee
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0
+}
+
+.site-title img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: contain
+}
+
+.site-title h1 {
+  font-size: 1.4rem;
+  margin: 0
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5rem
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--accent)
+}
+
+nav a:hover {
+  background: #e6f4fb
+}
+
+.hero {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0
+}
+
+.hero .hero-text {
+  flex: 1
+}
+
+.hero img {
+  width: 100%;
+  max-width: 500px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06)
+}
+
+.card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  margin-bottom: 1rem
+}
+
+.grid {
+  display: grid;
+  gap: 1rem
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  color: var(--muted)
+}
+
+.team img {
+  width: 100%;
+  border-radius: 6px
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0
+}
+
+.contact-list li {
+  padding: 0.25rem 0
+}
+
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none
+}
+
+.small {
+  font-size: 0.9rem;
+  color: var(--muted)
+}
+
+/* Image rules for cards */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px
+}
+
+/* Team portraits */
+.team img {
+  height: 220px;
+  object-fit: cover
+}
+
+/* Form styles */
+form label {
+  display: block;
+  margin-top: 0.6rem;
+  font-weight: 600
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+fieldset {
+  border: 1px solid #eee;
+  padding: 0.6rem;
+  border-radius: 6px;
+  margin-top: 0.6rem
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer
+}
+
+button.cta {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px
+}
+
+/* Responsive tweaks */
+@media (max-width:900px) {
+  .hero img {
+    height: 300px
+  }
+}
+
+@media (max-width:600px) {
+  .site-title {
+    flex-direction: row;
+    gap: 0.5rem
+  }
+
+  .hero {
+    flex-direction: column
+  }
+
+  .hero img {
+    max-width: 100%;
+    height: 220px
+  }
+
+  .card img {
+    height: 150px
+  }
+
+  .team img {
+    height: 180px
+  }
+}
+/* -----------------------------------
+   HAMBURGER MENU (MOBILE)
+----------------------------------- */
+
+/* Hide desktop nav on mobile */
+@media (max-width: 600px) {
+  nav ul {
+    display: none;
+  }
+}
+
+/* Mobile nav container */
+.mobile-nav {
+  background: var(--accent);
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+  display: block;
+}
+
+/* Mobile nav links (hidden by default) */
+#menu-links {
+  display: none;
+  text-align: center;
+}
+
+/* Mobile nav link appearance */
+.mobile-nav a {
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 0;
+}
+
+/* Hamburger icon */
+.mobile-nav a.menu-icon {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+/* Hide mobile nav on desktop */
+@media (min-width: 601px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
